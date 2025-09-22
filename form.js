@@ -13,12 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const TELEGRAM_BOT_TOKEN = "8469626716:AAHLYR33Z-3WTXYlAIa3Bc1O_KgP__qqXiE";
         const TELEGRAM_CHAT_ID = "4722607130";
 
-        const text = `Новое сообщение с сайта:
-Имя: ${name}
-Почта: ${email}
-Телефон: ${phone}
-Модель: ${model}
-Сообщение: ${message}`;
+        const text = `📩 Новое сообщение с сайта:
+👤 Имя: ${name}
+📧 Почта: ${email}
+📱 Телефон: ${phone}
+📦 Модель: ${model}
+📝 Сообщение: ${message}`;
 
         try {
             const response = await fetch(`https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`, {
@@ -31,17 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             const result = await response.json();
+            console.log("Ответ Telegram API:", result);
 
             if (result.ok) {
                 alert("Сообщение отправлено!");
                 form.reset();
             } else {
-                console.error("Ошибка Telegram API:", result);
-                alert("Ошибка при отправке!");
+                alert("Ошибка при отправке!\n\n" + JSON.stringify(result, null, 2));
             }
         } catch (err) {
             console.error("Ошибка соединения:", err);
-            alert("Ошибка соединения!");
+            alert("Ошибка соединения!\n\n" + err.message);
         }
     });
 });
