@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const message = document.getElementById("message").value;
 
         const TELEGRAM_BOT_TOKEN = "8469626716:AAHLYR33Z-3WTXYlAIa3Bc1O_KgP__qqXiE";
-        const TELEGRAM_CHAT_ID = "4722607130";
+        const TELEGRAM_CHAT_ID = "-4722607130";
 
         const text = `📩 Новое сообщение с сайта:
 👤 Имя: ${name}
