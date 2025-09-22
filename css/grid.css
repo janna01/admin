@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* обертка с ограничением ширины для контента */
+
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* для того чтобы колонки шли в один ряд (друг за другом) */
+
+/* row нужен только для колонок */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    /* wrap  переносит на другую строку элемент если он не помещается */
+}
+
+/* выбирает все колонки */
+
+[class*=col] {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* колонки */
+
+.col-2 {
+    width: calc(100% / 12 * 2);
+}
+
+.col-4 {
+    width: calc(100% / 12 * 4);
+}
+
+.col-5 {
+    width: calc(100% / 12 * 5);
+}
+
+.col-6 {
+    width: calc(100% / 12 * 6);
+}
+
+.col-10 {
+    width: calc(100% / 12 * 10);
+}
+
+.col-auto{
+    width: auto;
+}
+/* p {
+    background-color: red;
+    color: white;
+} */

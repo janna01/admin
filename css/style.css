@@ -1,0 +1,274 @@
+/* 
+ font-family: 'Source Sans Pro', sans-serif;
+ font-family: 'Lato', sans-serif;
+*/
+
+body {
+    background-color: #fff;
+    font-size: 16px;
+    color: #525151;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1,
+h2,
+h3,
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+ul,
+ol {
+    list-style-type: none;
+    /* убрали точки у списков */
+}
+
+/* header start */
+
+.header {
+    min-height: 100vh;
+    /* 100% высоты браузера */
+    background: url('../image/header-bg.jpg') no-repeat center center;
+    background-size: cover;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar-list a {
+    font-size: 17px;
+    font-weight: bold;
+    color: #231f20;
+    /* text-transform: uppercase; */
+}
+
+.main-title {
+    font-weight: 300;
+    font-size: 70px;
+    color: #231f20;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-title span {
+    font-weight: 900;
+    /* 900 - black */
+    color: #ff7373;
+}
+
+.btn {
+    background: #ff7373;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    width: 255px;
+    height: 55px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: calc(55px / 2);
+    border: none;
+    /* 55px высота  */
+}
+
+.header .container:last-child {
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* video */
+.video-container {
+    display: flex;
+    justify-content: center; /* Центрирует горизонтально */
+    align-items: center;    /* Центрирует вертикально */
+    padding-top: 50px;
+}
+
+.our-video {
+    background-color: #f6f6f8;
+    margin-bottom: 80px;
+    margin-top: 80px;
+    text-align: center;
+}
+
+.section-title {
+    color: #333333;
+    text-transform: uppercase;
+    font-size: 55px;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* ::before
+::after
+ обязательно свойство content */
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 150px;
+    border-bottom: 2px solid #ff7373;
+    margin: 0 auto;
+    margin-top: 10px;
+    /* отступ от заголовка */
+}
+
+.subtitle {
+    font-size: 18px;
+}
+
+.video-title {
+    padding-top: 100px;
+}
+
+
+
+/* bestsellers */
+
+.bestsellers {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../image/events-bg.jpg') no-repeat fixed;
+    background-size: cover/* cover-заполнение */
+    ;
+    background-attachment: fixed;
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.bestsellers .section-title {
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+.bestsellers-item img {
+    width: 100%;
+    /* проценты берутся от родителя */
+    display: block;
+}
+
+.bestsellers-card {
+    background: rgba(0, 0, 0, 0.8);
+    color: #ffffff;
+    padding: 20px 35px;
+    position: relative;
+    /* pos:r */
+    overflow: hidden;
+    /* ov:h */
+}
+
+.bestsellers-card h3 {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #ff7373;
+    margin-bottom: 15px;
+}
+
+.bestsellers-card .fa {
+    width: 25px;
+    font-size: 14px;
+}
+
+.bestsellers-btn {
+    width: 85px;
+    height: 85px;
+    background-color: #ff7373;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    /* c#f */
+    font-size: 25px;
+    /* fz25 */
+    font-weight: bold;
+    /* fw:b */
+    border-radius: 50%;
+    /* bdrs */
+    position: absolute;
+    right: -30px;
+    bottom: -30px;
+}
+
+/* events end */
+
+/* contact */
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    text-align: center;
+}
+
+.contact .section-title {
+    margin-bottom: 100px;
+}
+
+.contact .row {
+    justify-content: center;
+}
+
+.contact-input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    margin-bottom: 40px;
+    border-bottom: 1.5px solid #ccc;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.input-msg {
+    margin-top: 100px;
+}
+
+/* обращение к псевдоэлементу */
+
+.contact-input::placeholder {
+    opacity: 1;
+    /* 0-1 (0-толностью прозрачный, а 1- это непрозрачный полнлстью) */
+    color: #333;
+    font-size: 16px;
+}
+
+/* Валидация формы */
+
+.contact-input:invalid {
+    box-shadow: none;
+}
+
+.contact-input:focus:invalid {
+    border-color: #ff7373;
+}
+
+.contact-input:required:valid {
+    border-color: lightgreen;
+}
+
+/* Валидация формы конец */
+
+/* contact end */
+
+/* copyright */
+.copyright{
+    background-color: #000;
+    color: #858585;
+    font-size: 12px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+
+}
+
+.copyright .row{
+    justify-content: space-between;
+}
+/* copyright end */
